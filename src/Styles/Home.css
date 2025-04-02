@@ -1,0 +1,147 @@
+.homeContainer{
+  margin: 0 5%;
+}
+
+.homeCont1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 7%;
+}
+
+.welcome{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: hsl(27, 77%, 65%);
+    gap: 2%;
+}
+
+.welcome h5{
+  font-size: clamp(1rem, 1.1vw, 2rem);
+}
+
+.homeImg{
+  width: 800px;  
+  height: 800px;
+  background-image: url('/src/assets/114593.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.homeButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(27, 77%, 65%);
+    margin-top: 7%;
+    border: 2px solid hsl(27, 77%, 65%);
+    height: 60px;
+    width: 200px;
+    font-size: clamp(1rem, 1.1vw, 2rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+  }
+  .homeButton:hover{
+    color: white;
+    border: 2px solid white;
+    background-color: hsl(27, 77%, 65%);
+  }
+
+  .reviewCont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10%;
+  }
+
+  .viewAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(27, 77%, 65%);
+    border: 2px solid hsl(27, 77%, 65%);
+    height: 60px;
+    width: 200px;
+    font-size: clamp(1rem, 1.1vw, 2rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+  }
+  .viewAll:hover{
+    color: white;
+    border: 2px solid white;
+    background-color: hsl(27, 77%, 65%);
+  }
+
+  .blogCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 5%;
+    gap: 5%;
+  }
+
+  .blogCard{
+    width: 26vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mailingSubscriptionBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    height: 60vh;
+    border: 13px solid rgb(214, 214, 214);
+  }
+
+  .mailingImg{
+    position: relative;
+    right: 9.5%;
+    bottom: 15%;
+    background-image: url(/src/assets/creseimg1.jpg);
+    width: 700px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .mailingInput{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10%;
+    gap: 2%;
+  }
+
+  .emailAddress{
+    outline: none;
+    border: 1px solid rgb(165, 165, 165);
+    height: 7vh;
+    width: 100%;
+    border-radius: 4px;
+  }
+  .emailAddress::placeholder{
+    font-size: clamp(1rem, 1.2vw, 2rem);
+    padding: 5%;
+  }
+
+  .subscribe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(27, 77%, 65%);
+    border: 2px solid hsl(27, 77%, 65%);
+    height: 70px;
+    width: 350px;
+    font-size: clamp(1rem, 1.1vw, 2rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+  }

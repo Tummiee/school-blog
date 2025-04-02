@@ -1,0 +1,74 @@
+.footerCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(27, 77%, 65%);
+    margin-top: 35%;
+    height: 65vh;
+    color: white;
+
+}
+
+h1{
+    font-size: clamp(1rem, 3.1vw, 4rem);
+}
+pre{
+    font-size: clamp(1rem, 1.2vw, 2rem);
+}
+
+.FooterButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(27, 77%, 65%);
+    border: 2px solid white;
+    background-color: white;
+    margin-top: 1%;
+    height: 60px;
+    width: 200px;
+    font-size: clamp(1rem, 1.1vw, 2rem);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.FooterButton:hover{
+    color: white;
+    border: 2px solid white;
+    background-color: hsl(27, 77%, 65%);
+}
+
+.footerCont2-1{
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%; /* Limits the width to control spacing */
+    margin: 0 auto; /* Centers the container */
+    margin-top: 5%;
+    align-items: center;
+}
+
+.shoutouts{
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 0 auto; 
+    margin-top: 2%;
+    font-size: clamp(1rem, 1.2vw, 2rem);
+    color: hsl(0, 0%, 37%);
+}
+
+.footerLinks a{
+    margin: 0 30px;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.1vw, 2rem);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.footerSocialMedia svg{
+    color: hsl(27, 77%, 65%);
+    margin: 20px;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    cursor: pointer;
+}
