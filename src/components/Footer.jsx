@@ -10,17 +10,17 @@ function Footer() {
   return (
     <>
         <div className='footerCont'>
-            <h1>Lorem, ipsum dolor sit amet consectetur</h1>
-            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus.</h1>
-            <pre>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sed praesentium in iste? Quod, <br/>
+            <h1 className='footerH1'>Lorem, ipsum dolor sit amet consectetur</h1>
+            <h1 className='footerH1'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus.</h1>
+            <pr className='footerP'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sed praesentium in iste? Quod, <br/>
                 dolores ullam placeat esse porro quidem aliquam aperiam
                 quis hic fugiat voluptatem quaerat totam dolore quos!
-            </pre>
+            </pr>
             <div className='FooterButton' style={{textShadow: 'none'}}>LET'S TALK</div>
         </div>
         <div className='footerCont2'>
             <div className='footerCont2-1'>
-                <img src={Logo} style={{width: '100px'}}/>
+                <img src={Logo} style={{width: '5vw'}}/>
                 <div className='footerLinks'>
                     <a to="/"> HOME </a>
                     <a to="/menu"> ABOUT </a>

@@ -1,5 +1,5 @@
 .homeContainer{
-  margin: 0 5%;
+  margin: 0 3%;
 }
 
 .homeCont1{
@@ -7,6 +7,13 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 7%;
+  
+}
+
+.homeCont1R{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .welcome{
@@ -18,12 +25,13 @@
 }
 
 .welcome h5{
-  font-size: clamp(1rem, 1.1vw, 2rem);
+  font-size: clamp(.9rem, 1.1vw, 2rem);
+  font-weight: 400;
 }
 
 .homeImg{
-  width: 800px;  
-  height: 800px;
+  width: 600px;  
+  height: 600px;
   background-image: url('/src/assets/114593.jpg');
   background-size: cover;
   background-position: center;
@@ -37,11 +45,11 @@
     align-items: center;
     color: hsl(27, 77%, 65%);
     margin-top: 7%;
-    border: 2px solid hsl(27, 77%, 65%);
-    height: 60px;
-    width: 200px;
+    border: 1.5px solid hsl(27, 77%, 65%);
+    height: 45px;
+    width: 160px;
     font-size: clamp(1rem, 1.1vw, 2rem);
-    font-weight: 500;
+    font-weight: 400;
     cursor: pointer;
     transition: 0.2s ease-in;
   }
@@ -51,11 +59,21 @@
     background-color: hsl(27, 77%, 65%);
   }
 
+  .homeCont2{
+    margin-top: 10%;
+    
+  }
+
   .reviewCont{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 10%;
+    width: 100%;
+    gap: 2rem;
+  }
+  .reviewCont h1{
+    font-size: clamp(1.5rem, 3.8vw, 4rem);
   }
 
   .viewAll{
@@ -63,11 +81,11 @@
     justify-content: center;
     align-items: center;
     color: hsl(27, 77%, 65%);
-    border: 2px solid hsl(27, 77%, 65%);
-    height: 60px;
-    width: 200px;
+    border: 1.5px solid hsl(27, 77%, 65%);
+    height: 40px;
+    width: 120px;
     font-size: clamp(1rem, 1.1vw, 2rem);
-    font-weight: 500;
+    font-weight: 400;
     cursor: pointer;
     transition: 0.2s ease-in;
   }
@@ -82,31 +100,36 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-top: 5%;
-    gap: 5%;
+    gap: 3%;
   }
 
   .blogCard{
-    width: 26vw;
+    width: 31.33%;
     position: relative;
     overflow: hidden;
+  }
+  .bCImage{
+    flex: 1 1 calc(33.333% - 1rem); /* 3 per row */
+    min-width: 200px;
+    aspect-ratio: 1.2 / 1; /* Optional: keep boxes square */
   }
 
   .mailingSubscriptionBox{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
-    height: 60vh;
-    border: 13px solid rgb(214, 214, 214);
+    margin-top: 20%;
+    height: 380px;
+    border: 8px solid rgb(214, 214, 214);
+    gap: 10%;
   }
 
   .mailingImg{
     position: relative;
-    right: 9.5%;
     bottom: 15%;
     background-image: url(/src/assets/creseimg1.jpg);
-    width: 700px;
-    height: 600px;
+    width: 500px;
+    height: 400px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -115,7 +138,6 @@
   .mailingInput{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-top: 10%;
     gap: 2%;
   }
@@ -123,7 +145,7 @@
   .emailAddress{
     outline: none;
     border: 1px solid rgb(165, 165, 165);
-    height: 7vh;
+    height: 40px;
     width: 100%;
     border-radius: 4px;
   }
@@ -137,11 +159,235 @@
     justify-content: center;
     align-items: center;
     color: hsl(27, 77%, 65%);
-    border: 2px solid hsl(27, 77%, 65%);
-    height: 70px;
-    width: 350px;
+    border: 1.5px solid hsl(27, 77%, 65%);
+    height: 40px;
+    width: 300px;
     font-size: clamp(1rem, 1.1vw, 2rem);
     font-weight: 500;
     cursor: pointer;
     transition: 0.2s ease-in;
+  }
+  .subscribe:hover{
+    color: white;
+    border: 2px solid white;
+    background-color: hsl(27, 77%, 65%);
+  }
+
+  .homeCont4{
+    margin-top: 15%;
+    gap: 5%;
+    width: 100%;
+  }
+
+  .homeCont3body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 5%;
+    gap: 5%;
+  }
+
+  .homeCont3Left{
+    width: 100%;
+    height: 550px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .videoCards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: 45vw;
+  }
+
+  .videoCard{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    padding-bottom: 5%;
+  }
+  
+  .bCImage2{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .videoCardTexts{
+    width: 70%;
+    height: 15vh;
+    overflow: hidden;
+  }
+
+  .vAVideos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(27, 77%, 65%);
+    border: 1.5px solid hsl(27, 77%, 65%);
+    height: 40px;
+    width: 100%;
+    font-size: clamp(1rem, 1.1vw, 2rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+  }
+
+  .vAVideos:hover{
+    color: white;
+    border: 1.5px solid white;
+    background-color: hsl(27, 77%, 65%);
+  }
+
+  @media only screen and (max-width: 900px) {
+ 
+    .homeImg{
+      width: 280px;  
+      height: 280px;
+    }
+
+    .homeCont1R{
+      margin-top: 5%;
+    }
+
+    .welcome hr{
+      display: none;
+    }
+
+ 
+    .homeCont2{
+      margin-top: 12%;
+      
+    }
+  
+    .blogCard{
+      height: 45vw;
+    position: relative;
+    height: 500px;
+    }
+    .bCImage{
+      height: 200px;
+    }
+
+    .mailingSubscriptionBox{
+      margin-top: 10%;
+      height: 250px;
+      border: 8px solid rgb(214, 214, 214);
+      gap: 5%;
+    }
+  
+    .mailingImg{
+      width: 250px;
+      height: 250px;
+    }
+  
+    .mailingInput{
+      padding-top: 10%;
+      gap: 2%;
+    }
+  
+    .emailAddress{
+      border: 1px solid rgb(165, 165, 165);
+      height: 40px;
+      width: 100%;
+    }
+    .subscribe{
+      width: 200px;
+    }
+
+    .homeCont4{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .homeCont3body{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .homeCont3Video{
+      width: 100%;
+      height: 400px;
+    }
+  
+    .videoCards{
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      width: 100%;
+      margin-top: 10%;
+    }
+  
+    .videoCard{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5%;
+      padding-bottom: 5%;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .homeCont1{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .homeCont1R{
+      order: 2;
+    }
+
+    .welcome hr{
+      display: flex;
+    }
+
+    .homeImg{
+      position: unset;
+      right: 0;
+      width: 100%;  
+      height: 400px;
+      order: 1;
+    }
+
+    .reviewCont{
+      flex-direction: column;
+    }
+    .blogCards{
+      flex-direction: column;
+      align-items: center;
+    }
+    .blogCard{
+      width: 100%;
+    }
+
+    .bCImage{
+      width: 100%;
+      height: 350px;
+    }
+
+    .mailingSubscriptionBox{
+      flex-direction: column;
+      height: 600px;
+      
+    }
+
+    .mailingImg{
+      width: 85vw;
+      height: 400px;
+      bottom: 5%;
+    }
+
+    .mailingInput{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-bottom: 10%;
+    }
+    .subscribe{
+      width: 100%;
+    }
   }

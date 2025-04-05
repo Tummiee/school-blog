@@ -6,11 +6,11 @@ function BlogItems({ image, name, description }) {
 
   return (
     <div className='blogCard'>
-      <div style={{ backgroundImage: `url(${image})`, width: '100%', height: '45vh' }} className='bCImage'></div>
-      <h2 style={{fontSize: 'clamp(1rem, 2.8vw, 3.1rem)'}}>{name}</h2>
+      <div style={{ backgroundImage: `url(${image})` }} className='bCImage'></div>
+      <h2 style={{fontSize: 'clamp(1.4rem, 2.4vw, 3.1rem)'}}>{name}</h2>
       <pr style={{
         fontSize: 'clamp(1rem, 1.3vw, 2rem)',
-        color: 'hsl(0, 0.00%, 54.10%))'
+        color: 'hsl(0, 0.00%, 54.10%)'
       }}>{extractedSentence}</pr>
     </div>
   );

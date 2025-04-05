@@ -4,13 +4,14 @@ import '../Styles/Navbar.css'
 import { Instagram } from "@mui/icons-material"
 import { YouTube } from "@mui/icons-material"
 import { Facebook } from "@mui/icons-material"
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Navbar() {
   return (
     <div className='cont'>
         <div className='navbar'>
             <div className='leftSide'>
-                <img src={Logo} style={{width: '100px'}}/>
+                <img src={Logo} className='logoImg'/>
                 <div className='Links'>
                     <a to="/"> HOME </a>
                     <a to="/menu"> ABOUT </a>
@@ -23,12 +24,18 @@ function Navbar() {
             <div className=''>
                
             <div className='rightSide'>
+                <div className='rightSideBox'></div>
                 <div className="socialMedia">
                     <Instagram />
                     <YouTube />
                     <Facebook />
                 </div>
                 <div className='button'>LET'S TALK</div>
+                <div className='menuIcon'>
+                    <button>
+                        <MenuIcon />
+                    </button>
+                </div>
             </div>
             </div>
         </div>

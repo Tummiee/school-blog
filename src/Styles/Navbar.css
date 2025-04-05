@@ -1,7 +1,7 @@
 .navbar{
+    margin: 0 3%;
     display: flex;
     justify-content: space-between;
-    
 }
 
 .leftSide{
@@ -11,8 +11,10 @@
     height: 100%;
     width: 60%;
     margin: 20px auto;
-    padding: 20px;
-    margin-left: 4%;
+}
+
+.logoImg{
+    width: 5vw;
 }
 
 .Links{
@@ -20,33 +22,37 @@
 }
 
 .Links a{
-    margin: 0 15px;
+    margin: 0 1rem;
     text-decoration: none;
-    font-size: clamp(1rem, 1.1vw, 2rem);
+    font-size: clamp(.7rem, 1vw, 1.5rem);
     font-weight: 500;
     cursor: pointer;
 }
 
-.rightSide{
+.rightSideBox{
     position: absolute;
     top: 0;
     right: 0;
-    display: flex;
-    justify-content: center;
-    width: 40vw;
-    height: 80vh;
+    width: 35vw;
+    height: 900px;
     background-color: hsl(27, 77%, 65%);
-    z-index: 0;
+    z-index: -1;
+}
+.rightSide{
+    display: flex;
+    width: 35vw;
+    justify-content: flex-end;
+    align-content: center;
 }
 
 .socialMedia{
     margin-top: 7%;
-    margin-left: 18%;
+    margin-left: 10%;
 }
 
 .socialMedia svg {
     color: white;
-    margin: 20px;
+    margin: 10px;
     font-size: clamp(1rem, 1.5vw, 2rem);
     cursor: pointer;
   }
@@ -57,12 +63,12 @@
     align-items: center;
     color: white;
     margin-top: 7%;
-    margin-left: 5%;
-    border: 2px solid white;
-    height: 55px;
-    width: 200px;
-    font-size: clamp(1rem, 1.1vw, 2rem);
-    font-weight: 500;
+    margin-left: 4%;
+    border: 1.5px solid white;
+    height: 38px;
+    width: 128px;
+    font-size: clamp(.7rem, .9vw, 1.7rem);
+    font-weight: 400;
     cursor: pointer;
     transition: 0.2s ease-in;
   }
@@ -71,4 +77,58 @@
     color: hsl(27, 77%, 65%);
     border: 2px solid white;
     background-color: white;
+  }
+
+  .menuIcon{
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    display: none;
+    height: 2px;
+    width: 2px;
+    margin-top: 20px;
+    margin-right: 5%;
+    border-radius: 50%;
+    background-color: hsl(27, 41%, 49%);
+  }
+  .menuIcon button{
+    color: white;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+  }
+  .menuIcon button svg{
+    font-size: clamp(1.5rem, 2.1vw, 3rem);
+  }
+
+  @media only screen and (max-width: 900px) {
+    .Links{
+        display: none;
+    }
+    .socialMedia{
+        display: none;
+    }
+    .button{
+        display: none;
+    }
+
+    .rightSideBox{
+        justify-content: flex-end;
+        height: 550px;
+        width: 20vw;
+        
+    }
+    .menuIcon{
+        display: flex;
+    }
+
+    .leftSide{
+        margin: 0;
+        padding: 13px;
+    }
+    .leftSide .logoImg{
+        width: 50px;
+    }
+    
   }
