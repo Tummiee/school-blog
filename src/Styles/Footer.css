@@ -78,7 +78,7 @@
 
 @media only screen and (max-width: 900px) {
     .footerCont{
-        height: 35vh;
+        height: 40vh;
     }
     .footerCont2-1{
         flex-direction: column;
