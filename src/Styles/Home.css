@@ -107,6 +107,9 @@
     width: 31.33%;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
   }
   .bCImage{
     flex: 1 1 calc(33.333% - 1rem); /* 3 per row */
@@ -235,6 +238,9 @@
     width: 70%;
     height: 15vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
   }
 
   .vAVideos{
