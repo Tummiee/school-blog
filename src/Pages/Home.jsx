@@ -63,9 +63,11 @@ function Home() {
             <div className='mailingSubscriptionBox'>
                     <div className='mailingImg'></div>
                     <div className='mailingTexts'>
-                        <h1 style={{fontSize: 'clamp(2rem, 3.6vw, 5rem)'}}>Join Mailing List</h1>
+                        <h1 style={{fontSize: 'clamp(2rem, 3.6vw, 5rem)'
+                        }}>Join Mailing List</h1>
                         <p style={{fontSize: 'clamp(1rem, 1.3vw, 1.8rem)',
-                                    color: 'hsl(0, 0.00%, 54.10%)'
+                                    color: 'hsl(0, 0.00%, 54.10%)',
+                                    paddingTop: '8%'
                         }}>Sign up and get all the latest, and videos</p>
                         <div className='mailingInput'>
                             <input placeholder='Email Address' className='emailAddress'></input>

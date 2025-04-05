@@ -114,14 +114,24 @@
     aspect-ratio: 1.2 / 1; /* Optional: keep boxes square */
   }
 
-  .mailingSubscriptionBox{
+  .homeCont3{
     display: flex;
     justify-content: center;
+  }
+
+  .mailingSubscriptionBox{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     margin-top: 20%;
-    height: 380px;
+    padding-left: 5%;  /* Padding for left */
+    padding-right: 5%; /* Padding for right */
+    width: 95%;
+    height: 400px;
     border: 8px solid rgb(214, 214, 214);
-    gap: 10%;
+    background-color: rgb(255, 255, 255);
+    gap: 6%;
+    
   }
 
   .mailingImg{
@@ -135,19 +145,25 @@
     background-repeat: no-repeat;
   }
 
+  .mailingTexts{
+    width: 50%;
+    margin-top: 6%;
+  }
+
   .mailingInput{
     display: flex;
     justify-content: space-between;
     padding-top: 10%;
     gap: 2%;
+    
   }
 
   .emailAddress{
     outline: none;
     border: 1px solid rgb(165, 165, 165);
-    height: 40px;
+    height: 45px;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 2px;
   }
   .emailAddress::placeholder{
     font-size: clamp(1rem, 1.2vw, 2rem);
@@ -161,8 +177,8 @@
     color: hsl(27, 77%, 65%);
     border: 1.5px solid hsl(27, 77%, 65%);
     height: 40px;
-    width: 300px;
-    font-size: clamp(1rem, 1.1vw, 2rem);
+    width: 50%;
+    font-size: clamp(.8rem, 1.1vw, 2rem);
     font-weight: 500;
     cursor: pointer;
     transition: 0.2s ease-in;
@@ -294,7 +310,7 @@
       width: 100%;
     }
     .subscribe{
-      width: 200px;
+      width: 60%;
     }
 
     .homeCont4{
@@ -371,14 +387,21 @@
 
     .mailingSubscriptionBox{
       flex-direction: column;
-      height: 600px;
-      
+      height: 800px;
+      width: 100%;
     }
+
+    .mailingTexts{
+      width: 50%;
+      margin-top: -25%;
+      width: 100%;
+    }
+  
 
     .mailingImg{
       width: 85vw;
       height: 400px;
-      bottom: 5%;
+      bottom: 10%;
     }
 
     .mailingInput{
