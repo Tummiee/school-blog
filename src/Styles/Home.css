@@ -413,4 +413,8 @@
     .subscribe{
       width: 100%;
     }
+
+    .videoCards{
+      margin-top: -8%;
+    }
   }
