@@ -99,6 +99,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: self-start;
     padding-top: 5%;
     gap: 3%;
   }
@@ -106,10 +107,10 @@
   .blogCard{
     width: 31.33%;
     position: relative;
-    overflow: hidden;
+    
     display: flex;
     flex-direction: column;
-    gap: 5%;
+    gap: 1rem;
   }
   .bCImage{
     flex: 1 1 calc(33.333% - 1rem); /* 3 per row */
@@ -120,13 +121,13 @@
   .homeCont3{
     display: flex;
     justify-content: center;
+    margin-top: 15%;
   }
 
   .mailingSubscriptionBox{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 20%;
     padding-left: 5%;  /* Padding for left */
     padding-right: 5%; /* Padding for right */
     width: 95%;
@@ -285,9 +286,8 @@
     }
   
     .blogCard{
-      height: 45vw;
     position: relative;
-    height: 500px;
+    
     }
     .bCImage{
       height: 200px;
@@ -384,6 +384,8 @@
     }
     .blogCard{
       width: 100%;
+      
+      padding-top: 8%;
     }
 
     .bCImage{
