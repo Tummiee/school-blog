@@ -91,6 +91,17 @@
     border-radius: 50%;
     background-color: hsl(27, 41%, 49%);
   }
+  .menuIcon2{
+    position: fixed;
+    right: 3%;
+    top: 3%;
+}
+    .menuIcon2 button{
+        border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    }
   .menuIcon button{
     color: white;
     border: none;
@@ -101,6 +112,34 @@
   .menuIcon button svg{
     font-size: clamp(1.5rem, 2.1vw, 3rem);
   }
+
+  .hiddenLinks{
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 98;
+    background: white;
+    padding-top: 105px;
+    transition: 0.4s ease-in;
+  }
+
+  .hiddenLinks a {
+    display: block;
+    width: 100%;
+    margin: 0 auto 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding:  16px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .navbar #open {
+    display: block;
+  }
+  
 
   @media only screen and (max-width: 900px) {
     .Links{
@@ -130,5 +169,23 @@
     .leftSide .logoImg{
         width: 50px;
     }
+
+    .navbar #open .hiddenLinks {
+        display: inherit;
+        
+      }
+      
+      .navbar #close .hiddenLinks {
+        display: none;
+      }
+      
+      .navbar #open img {
+        display: none;
+      }
+      
+      .navbar #close img {
+        display: inherit;
+      }
+  
     
   }
