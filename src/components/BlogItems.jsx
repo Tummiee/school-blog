@@ -14,9 +14,9 @@ function BlogItems({ image, name, description }) {
         color: 'hsl(0, 0.00%, 54.10%)'
       }}>{extractedSentence}</pr>
       <div className='readMore' style={{
-        fontSize: 'clamp(1rem, 1.2vw, 2rem)',
+        fontSize: 'clamp(.9rem, 1.1vw, 2rem)',
         color: 'hsl(27, 77%, 65%)'
-      }}>READ MORE <EastIcon/></div>
+      }}>READ MORE <EastIcon style={{fontSize: 'clamp(.8rem, 1.2vw, 2rem)'}}/></div>
     </div>
   );
 }
