@@ -28,14 +28,14 @@ function Home() {
                 <h2 style={{fontSize: 'clamp(1.2rem, 2.1vw, 2.4rem)',
                             fontWeight: '500'
                 }}>Motto: Roots to grow, wings to fly</h2>
-                <pr style={{
+                <p style={{
                     color: 'hsl(0, 0.00%, 54.10%)'
                 }}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
                     Impedit commodi qui, accusamus ullam nesciunt mollitia quis<br/>
                     minus neque ut corporis assumenda iusto laudantium voluptatem<br/>
                     molestiae cumque praesentium? Culpa, ipsam similique.
-                </pr>
+                </p>
                 <div className='homeButton'>JOIN INSIDER</div>
             </div>
             <div className='homeImg'></div>

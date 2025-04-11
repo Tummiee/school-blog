@@ -6,14 +6,16 @@ import { YouTube } from "@mui/icons-material"
 import { Facebook } from "@mui/icons-material"
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import {Link} from 'react-router-dom';
 
 function Navbar() {
 
-    const [openLinks, setOpenLinks] = useState(false)
+const [openLinks, setOpenLinks] = useState(false)
 
-    const toggleNavbar = () => {
+const toggleNavbar = () => {
       setOpenLinks(!openLinks)
 }
+
 
   return (
     <div className='cont'>
@@ -21,11 +23,10 @@ function Navbar() {
             <div className='leftSide'>
                 <img src={Logo} className='logoImg'/>
                 <div className='Links'>
-                    <a to="/"> HOME </a>
-                    <a to="/menu"> ABOUT </a>
-                    <a to="/about"> REVIEWS </a>
-                    <a to="/videos"> VIDEOS </a>
-                    <a to="/contact"> CONTACTS </a> 
+                    <Link to="/"> HOME </Link>
+                    <Link to="/about"> ABOUT </Link>
+                    <Link to="/videos"> VIDEOS </Link>
+                    <Link to="/contact"> CONTACTS </Link> 
                 </div>
             </div>
 
@@ -37,11 +38,10 @@ function Navbar() {
                                     <CloseIcon onClick={toggleNavbar}/>
                                 </button>
                             </div>
-                            <a to="/"> HOME </a>
-                            <a to="/menu"> ABOUT </a>
-                            <a to="/about"> REVIEWS </a>
-                            <a to="/videos"> VIDEOS </a>
-                            <a to="/contact"> CONTACTS </a> 
+                            <Link to="/"> HOME </Link>
+                            <Link to="/about"> ABOUT </Link>
+                            <Link to="/videos"> VIDEOS </Link>
+                            <Link to="/contact"> CONTACTS </Link> 
                     </div>
                 </div>
                 <div className='rightSide'>

@@ -88,7 +88,7 @@
     color: hsl(27, 77%, 65%);
     border: 1.5px solid hsl(27, 77%, 65%);
     height: 40px;
-    width: 120px;
+    width: 150px;
     font-size: clamp(1rem, 1.1vw, 2rem);
     font-weight: 400;
     cursor: pointer;

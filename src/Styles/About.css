@@ -1,0 +1,33 @@
+.aboutContainer{
+    margin: 0 3%;
+  }
+  
+  .aboutCont1{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7%;
+    
+  }
+  
+  .aboutCont1R{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+  }
+ 
+  .aboutImg{
+    position: relative;
+    transform: translate(6.8%, -25%);
+    width: 50vw;  
+    height: 770vh;
+    line-height: 600px;
+    background-image: url('/src/assets/2150814387.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 150px;
+    max-width: 600px;
+    min-height: 150px;
+    max-height: 800px;
+    z-index: 1;
+  }
