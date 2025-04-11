@@ -15,6 +15,7 @@ const [openLinks, setOpenLinks] = useState(false)
 const toggleNavbar = () => {
       setOpenLinks(!openLinks)
 }
+const closeNavbar = () => setOpenLinks(false);
 
 
   return (
@@ -38,10 +39,10 @@ const toggleNavbar = () => {
                                     <CloseIcon onClick={toggleNavbar}/>
                                 </button>
                             </div>
-                            <Link to="/"> HOME </Link>
-                            <Link to="/about"> ABOUT </Link>
-                            <Link to="/videos"> VIDEOS </Link>
-                            <Link to="/contact"> CONTACTS </Link> 
+                            <Link to="/" onClick={closeNavbar}> HOME </Link>
+                            <Link to="/about" onClick={closeNavbar}> ABOUT </Link>
+                            <Link to="/videos" onClick={closeNavbar}> VIDEOS </Link>
+                            <Link to="/contact" onClick={closeNavbar}> CONTACTS </Link> 
                     </div>
                 </div>
                 <div className='rightSide'>
