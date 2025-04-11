@@ -121,6 +121,15 @@
     flex: 1 1 calc(33.333% - 1rem); /* 3 per row */
     min-width: 200px;
     aspect-ratio: 1.2 / 1; /* Optional: keep boxes square */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .readMore{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2%;
   }
 
   .homeCont3{

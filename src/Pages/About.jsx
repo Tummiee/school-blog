@@ -31,6 +31,14 @@ function About() {
                 marginLeft: '10%'
               }}/></div>
           </div>
+          <div className='aboutImgDesignPics'>
+              <div className='aboutImgDesign' style={{backgroundImage: 'url(/src/assets/creseimg1.jpg)'}}></div>
+              <div className='aboutImgDesign' style={{backgroundImage: 'url(/src/assets/creseimg3.jpg)'}}></div>
+              <div className='aboutImgDesign' style={{backgroundImage: 'url(/src/assets/creseimg2.png)'}}></div>
+              <div className='aboutImgDesign' style={{backgroundImage: 'url(/src/assets/creseimg4.jpg)'}}></div>
+              <div className='aboutImgDesign' style={{backgroundImage: 'url(/src/assets/114593.jpg)'}}></div>
+              <div className='aboutImgDesign' style={{backgroundImage: 'url(/src/assets/Bimage1.jpg)'}}></div>
+          </div>
         </div>
     </div>
   )

@@ -1,4 +1,5 @@
 import React from 'react';
+import EastIcon from '@mui/icons-material/East';
 
 function BlogItems({ image, name, description }) {
   // Extract the second sentence safely
@@ -9,9 +10,13 @@ function BlogItems({ image, name, description }) {
       <div style={{ backgroundImage: `url(${image})` }} className='bCImage'></div>
       <h2 style={{fontSize: 'clamp(1.4rem, 2.4vw, 3.1rem)'}}>{name}</h2>
       <pr style={{
-        fontSize: 'clamp(1rem, 1.3vw, 2rem)',
+        fontSize: 'clamp(1rem, 1.2vw, 2rem)',
         color: 'hsl(0, 0.00%, 54.10%)'
       }}>{extractedSentence}</pr>
+      <div className='readMore' style={{
+        fontSize: 'clamp(1rem, 1.2vw, 2rem)',
+        color: 'hsl(27, 77%, 65%)'
+      }}>READ MORE <EastIcon/></div>
     </div>
   );
 }
