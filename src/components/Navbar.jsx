@@ -26,8 +26,8 @@ const closeNavbar = () => setOpenLinks(false);
                 <div className='Links'>
                     <Link to="/"> HOME </Link>
                     <Link to="/about"> ABOUT </Link>
-                    <Link to="/videos"> VIDEOS </Link>
-                    <Link to="/contact"> CONTACTS </Link> 
+                    <Link to="/reviews"> REVIEWS </Link>
+                    <Link to="/videos"> VIDEOS </Link> 
                 </div>
             </div>
 
@@ -41,8 +41,8 @@ const closeNavbar = () => setOpenLinks(false);
                             </div>
                             <Link to="/" onClick={closeNavbar}> HOME </Link>
                             <Link to="/about" onClick={closeNavbar}> ABOUT </Link>
-                            <Link to="/videos" onClick={closeNavbar}> VIDEOS </Link>
-                            <Link to="/contact" onClick={closeNavbar}> CONTACTS </Link> 
+                            <Link to="/reviews" onClick={closeNavbar}> REVIEWS </Link>
+                            <Link to="/videos" onClick={closeNavbar}> VIDEOS </Link> 
                     </div>
                 </div>
                 <div className='rightSide'>
