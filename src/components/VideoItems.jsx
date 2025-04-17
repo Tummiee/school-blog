@@ -9,10 +9,10 @@ function VideoItems({image, description, name}) {
        <div style={{ backgroundImage: `url(${image})`, width: '25%', height: '15vh' }} className='bCImage2'></div>
        <div className='videoCardTexts'>
             <h2 style={{fontSize: 'clamp(1rem, 1.5vw, 2.5rem)'}}>{name}</h2>
-            <pr style={{
+            <p style={{
                 fontSize: 'clamp(1rem, 1.3vw, 1.6rem)',
                 color: 'hsl(0, 0.00%, 54.10%)'
-            }}>{extractedSentence}</pr>
+            }}>{extractedSentence}</p>
         </div> 
     </div>
   )

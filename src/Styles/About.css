@@ -42,7 +42,7 @@
   }
   .aboutImgDesign{
     flex: 1 1 calc(16.666% - 1rem);
-    min-width: 150px;
+    min-width: 100px;
     aspect-ratio: 1 / 1;
     background-size: cover;
     background-repeat: no-repeat;

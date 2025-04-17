@@ -33,7 +33,7 @@ function Reviews() {
                     molestiae cumque praesentium? Culpa, ipsam similique.
                 </p>
             </div>
-            <div className='homeImg'></div>
+            <div className='homeImg' style={{backgroundImage: 'url(/src/assets/african-kid-enjoying-life.jpg)'}}></div>
         </div>
             {BlogUpdates.slice(0, 1).map(({id,description,name,imageUrl}) => {
                             return(

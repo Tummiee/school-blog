@@ -15,14 +15,14 @@ export const Videos = [
         name: "Dummy Video 2",
         description: "eprktmtmfpdf",
         imageUrl: Vimage2,
-        video: ''
+        video: Vvideo1
     },
     {
         id: 3,
         name: "Dummy Video 2",
         description: "eprktmtmfpdf",
         imageUrl: Vimage2,
-        video: ''
+        video: Vvideo1
     },
 
 ]
