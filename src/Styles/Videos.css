@@ -22,7 +22,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
     gap: 2rem;
   }
 
@@ -34,8 +33,41 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    height: 60vh;
     width: 100%;
+  }
+
+  .vCont{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .vCont video{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  .center-play2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: hsl(27, 77%, 65%);
+    padding: 12px 20px;
+    border-radius: 50%;
+    pointer-events: none; /* icon is not clickable */
+  }
+  .center-play2 svg{
+    font-size: 3rem;
   }
 
   .allVids{
@@ -44,23 +76,54 @@
     justify-content: center;
     text-align: center;
     gap: 2rem;
+    
   }
 
   .allVideos{
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-between;
-    margin-top: 5%;
+    gap: 20px;
   }
 
   .video-container2{
-    flex: 1 1 calc(33.333% - 1rem); /* 3 per row with spacing */
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.333% - 20px); /* 3 per row with spacing */
+    max-width: calc(33.333% - 20px);
+    padding: 10px;
     box-sizing: border-box;
-    height: 40vh;
-    width: 100%;
     gap: 2rem;
+  }
+
+  .vCont2{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .vCont2 video{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  .pagination-buttons{
+    
+  }
+  .pagination-buttons button{
+    color: hsl(27, 77%, 65%);
+    border: 1.5px solid hsl(27, 77%, 65%);
+    background-color: white;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    width: 10%;
   }
 
   @media only screen and (max-width: 900px) {
@@ -70,6 +133,10 @@
 
     .allVideos{
         flex-direction: column;
+    }
+
+    .video-container2{
+      max-width: 100%;
     }
 
     .allVids{

@@ -24,5 +24,19 @@ export const Videos = [
         imageUrl: Vimage2,
         video: Vvideo1
     },
+    {
+        id: 4,
+        name: "Dummy Video 2",
+        description: "eprktmtmfpdf",
+        imageUrl: Vimage2,
+        video: Vvideo1
+    },
+    {
+        id: 5,
+        name: "Dummy Video 2",
+        description: "eprktmtmfpdf",
+        imageUrl: Vimage2,
+        video: Vvideo1
+    },
 
 ]

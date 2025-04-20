@@ -4,6 +4,8 @@ import BlogItems from '../components/BlogItems'
 import {Videos} from '../Data/Videos'
 import VideoItems from '../components/VideoItems'
 import '../Styles/Home.css'
+import {Link} from 'react-router-dom';
+
 
 function Home() {
   return (
@@ -43,7 +45,7 @@ function Home() {
         <div className='homeCont2'>
                 <div className='reviewCont'>
                     <h1>Latest Reviews</h1>
-                    <div className='viewAll'>VIEW ALL</div>
+                   <Link to="/reviews" style={{textDecoration: 'none'}}><div className='viewAll'>VIEW ALL</div></Link>
                 </div>
                 <div className='blogCards'>
                     {BlogUpdates.map(({id,description,name,imageUrl}) => {
@@ -83,20 +85,20 @@ function Home() {
         <div className='homeCont3body'>
             <div className='homeCont3Left'>
                 <div className='homeCont3Video'>
-                    <video width="100%" autoPlay loop muted playsInline className="video-bg">
+                    <video width="100%" autoPlay loop muted className="video-bg">
                         <source src="/Videos/cresevideo1.mp4" type="video/mp4" />
                     </video>
                 </div>
             </div>
             <div className='homeCont3Right'>
                 <div className='videoCards'>
-                        {Videos.map(({id,description,name,imageUrl}) => {
+                        {Videos.slice(0, 4).map(({id,description,name,video}) => {
                             return(
                                 <VideoItems
                                     key={id}
                                     name={name}
                                     description={description}
-                                    image={imageUrl}
+                                    video={video}
                                 />
                             )
                         

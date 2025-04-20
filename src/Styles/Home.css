@@ -42,6 +42,7 @@
   min-height: 150px;
   max-height: 600px;
   z-index: 1;
+  border-radius: 15px;
 }
 
 .homeButton{
@@ -57,6 +58,7 @@
     font-weight: 400;
     cursor: pointer;
     transition: 0.2s ease-in;
+    border-radius: 10px;
   }
   .homeButton:hover{
     color: white;
@@ -93,6 +95,7 @@
     font-weight: 400;
     cursor: pointer;
     transition: 0.2s ease-in;
+    border-radius: 10px;
   }
   .viewAll:hover{
     color: white;
@@ -123,6 +126,7 @@
     aspect-ratio: 1.2 / 1; /* Optional: keep boxes square */
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 15px;
   }
 
   .readMore{
@@ -130,6 +134,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 2%;
+    cursor: pointer;
   }
 
   .homeCont3{
@@ -161,6 +166,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 15px;
   }
 
   .mailingTexts{
@@ -182,6 +188,7 @@
     height: 45px;
     width: 100%;
     border-radius: 2px;
+    border-radius: 7px;
   }
   .emailAddress::placeholder{
     font-size: clamp(1rem, 1.2vw, 2rem);
@@ -200,6 +207,7 @@
     font-weight: 500;
     cursor: pointer;
     transition: 0.2s ease-in;
+    border-radius: 5px;
   }
   .subscribe:hover{
     color: white;
@@ -218,16 +226,23 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 5%;
-    gap: 5%;
+    gap: 5rem;
   }
 
   .homeCont3Left{
     width: 100%;
     height: 550px;
-    margin: auto;
     overflow: hidden;
   }
-
+  .homeCont3Video{
+    height: 100%;
+  }
+  .homeCont3Video video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+  }
   .videoCards{
     display: flex;
     flex-direction: column;
@@ -244,10 +259,84 @@
   }
   
   .bCImage2{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
   }
+  .bCImage2 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .center-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: hsl(27, 77%, 65%);
+    padding: 12px 20px;
+    border-radius: 50%;
+    pointer-events: none; /* icon is not clickable */
+  }
+  .center-play svg{
+    font-size: 1.8rem;
+  }
+
+  /* Fullscreen immersive player */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+}
+
+.video-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: black;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 3;
+}
 
   .videoCardTexts{
     width: 70%;

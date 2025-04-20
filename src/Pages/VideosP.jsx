@@ -44,7 +44,7 @@ function VideosP() {
             }}>Videos</h1>
             <p style={{
                 color: 'hsl(0, 0.00%, 54.10%)',
-                fontSize: 'clamp(1.1rem, 1.9vw, 2.4rem)'
+                fontSize: 'clamp(1.1rem, 1.5vw, 2.4rem)'
             }}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
                 Impedit commodi qui, accusamus ullam nesciunt mollitia quis<br/>
@@ -105,8 +105,12 @@ function VideosP() {
                     })}
                 </div>
                 <div className="pagination-buttons" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '20px' }}>
-                    <button onClick={prevPage} disabled={currentPage === 0}>Previous</button>
-                    <button onClick={nextPage} disabled={startIndex + itemsPerPage >= Videos.length}>Next</button>
+                    <button onClick={prevPage} disabled={currentPage === 0} style={{borderTopLeftRadius: '10px',
+                                                                                    borderBottomLeftRadius: '10px'
+                                                                                    }}>Previous</button>
+                    <button onClick={nextPage} disabled={startIndex + itemsPerPage >= Videos.length}style={{borderTopRightRadius: '10px',
+                                                                                    borderBottomRightRadius: '10px'
+                                                                                    }}>Next</button>
                 </div>
             </div>
         </div>
