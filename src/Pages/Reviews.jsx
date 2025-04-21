@@ -1,10 +1,28 @@
-import React from 'react'
+import {useState} from 'react'
 import {BlogUpdates} from '../Data/BlogUpdates'
 import FeaturedReviewsItem from '../components/FeaturedReviewsItem'
 import BlogItems from '../components/BlogItems'
 import '../Styles/Reviews.css'
 
 function Reviews() {
+
+     const itemsPerPage = 6;
+      const [currentPage, setCurrentPage] = useState(0);
+    
+      const startIndex = currentPage * itemsPerPage;
+      const paginatedBlogs = BlogUpdates.slice(startIndex, startIndex + itemsPerPage);
+    
+      const nextPage = () => {
+        if (startIndex + itemsPerPage < BlogUpdates.length) {
+          setCurrentPage(prev => prev + 1);
+        }
+      };
+    
+      const prevPage = () => {
+        if (currentPage > 0) {
+          setCurrentPage(prev => prev - 1);
+        }
+      };
     
   return (
     <div className='reviewsContainer'>
@@ -48,7 +66,7 @@ function Reviews() {
                         })}
         <div className='reviewCont2'>
                 <div className='blogCards'>
-                    {BlogUpdates.slice(1).map(({id,description,name,imageUrl}) => {
+                    {paginatedBlogs.slice(1).map(({id,description,name,imageUrl}) => {
                         return(
                             <BlogItems
                                 key={id}
@@ -60,6 +78,14 @@ function Reviews() {
                     
                     })}
                 </div>
+                <div className="pagination-buttons" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '40px' }}>
+                                    <button onClick={prevPage} disabled={currentPage === 0} style={{borderTopLeftRadius: '10px',
+                                                                                                    borderBottomLeftRadius: '10px'
+                                                                                                    }}>Previous</button>
+                                    <button onClick={nextPage} disabled={startIndex + itemsPerPage >= BlogUpdates.length}style={{borderTopRightRadius: '10px',
+                                                                                                    borderBottomRightRadius: '10px'
+                                                                                                    }}>Next</button>
+                                </div>
         </div>
         <div className='homeCont3'>
             <div className='mailingSubscriptionBox'>
