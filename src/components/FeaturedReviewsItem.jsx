@@ -6,7 +6,7 @@ function FeaturedReviewsItem({ image, name, description }) {
 
   return (
     <div className='featuredReview'>
-        <div style={{ backgroundImage: `url(${image})` }} className='fRImg'></div>
+        <div style={{ backgroundImage: `url(${image})`, borderRadius: '20px' }} className='fRImg'></div>
         <div className='fRright'>
             <h5 style={{color: 'hsl(27, 77%, 65%)'}}>FEATURED REVIEWS</h5>
             <h1 style={{fontSize: 'clamp(1.4rem, 3.4vw, 4.1rem)',

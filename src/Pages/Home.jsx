@@ -48,17 +48,18 @@ function Home() {
                    <Link to="/reviews" style={{textDecoration: 'none'}}><div className='viewAll'>VIEW ALL</div></Link>
                 </div>
                 <div className='blogCards'>
-                    {BlogUpdates.map(({id,description,name,imageUrl}) => {
-                        return(
-                            <BlogItems
-                                key={id}
-                                name={name}
-                                description={description}
-                                image={imageUrl}
-                            />
-                        )
-                    
-                    })}
+                {BlogUpdates.length > 0 ? (
+                    BlogUpdates.slice(0, 3).map(({ id, description, name, imageUrl }) => (
+                    <BlogItems
+                        key={id}
+                        name={name}
+                        description={description}
+                        image={imageUrl}
+                    />
+                    ))
+                ) : (
+                    <div className="no-blogs">📝 No blog post yet.</div>
+                )}
                 </div>
         </div>
         <div className='homeCont3'>
@@ -92,24 +93,25 @@ function Home() {
             </div>
             <div className='homeCont3Right'>
                 <div className='videoCards'>
-                        {Videos.slice(0, 4).map(({id,description,name,video}) => {
-                            return(
+                    {Videos.length > 0 ? (
+                        Videos.slice(0, 4).map(({id,description,name,video}) => (
                                 <VideoItems
                                     key={id}
                                     name={name}
                                     description={description}
                                     video={video}
                                 />
-                            )
-                        
-                        })}
+                            ))
+                        ) : (
+                            <div className="no-blogs">📝 No video yet.</div>
+                    )}
+                </div> 
                         <div className='vAVideos'>VIEW ALL VIDEOS</div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-  )
+)
 }
 
 export default Home

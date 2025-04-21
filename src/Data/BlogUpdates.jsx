@@ -18,5 +18,5 @@ export const BlogUpdates = [
         name: "Cepoejwoew",
         description: "loroe mjjlkhoif klsrn iosroisro isrno nrjnrssron",
         imageUrl: Bimage1
-    }
+    },
 ]
