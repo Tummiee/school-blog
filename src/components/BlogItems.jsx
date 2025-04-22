@@ -1,6 +1,7 @@
 import React from 'react';
 import EastIcon from '@mui/icons-material/East';
 
+
 function BlogItems({ image, name, description }) {
   // Extract the second sentence safely
   const extractedSentence = description?.split('. ')[1] ? description.split('. ')[1] + '.' : description;
