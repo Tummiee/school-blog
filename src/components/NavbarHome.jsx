@@ -24,7 +24,7 @@ const closeNavbar = () => setOpenLinks(false);
             <div className='leftSide'>
                 <img src={Logo} className='logoImg'/>
                 <div className='Links'>
-                    <Link to="/"> HOME </Link>
+                    <Link to="/" style={{color: 'hsl(27, 77%, 65%)'}}> HOME </Link>
                     <Link to="/about"> ABOUT </Link>
                     <Link to="/reviews"> REVIEWS </Link>
                     <Link to="/videos"> VIDEOS </Link> 

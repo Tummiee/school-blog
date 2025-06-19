@@ -30,8 +30,8 @@ function VideoItems2({video, description, name}) {
                     <PlayCircleIcon/>
                 </div>
             </div>
-            <h2>{name}</h2>
-            <p>{extractedSentence}</p>
+            <h2 className='h2h'>{name}</h2>
+            <p className='p2h'>{extractedSentence}</p>
              {/* Fullscreen overlay */}
             {isExpanded && (
                 <div className="video-overlay">

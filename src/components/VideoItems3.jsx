@@ -30,8 +30,8 @@ function VideoItems3({video, description, name}) {
                     <PlayCircleIcon/>
                 </div>
             </div>
-            <h2 style={{fontSize: 'clamp(1.2rem, 1.8vw, 2.4rem)'}}>{name}</h2>
-            <p style={{color: 'hsl(0, 0.00%, 54.10%)',
+            <h2 className='h2h' style={{fontSize: 'clamp(1.2rem, 1.8vw, 2.4rem)'}}>{name}</h2>
+            <p className='p2h' style={{color: 'hsl(0, 0.00%, 54.10%)',
                         fontSize: 'clamp(1rem, 1.3vw, 2rem)'
             }}>{extractedSentence}</p>
              {/* Fullscreen overlay */}
