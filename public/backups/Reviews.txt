@@ -1,20 +1,30 @@
-import React, {useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import FeaturedReviewsItem from '../components/FeaturedReviewsItem'
 import BlogItems from '../components/BlogItems'
-import { BlogUpdates } from '../Data/BlogUpdates';
+import axios from 'axios';
 import '../Styles/Reviews.css'
 
 function Reviews() {
 
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        fetchBlogs();
+      }, []);
+      
+      const fetchBlogs = async () => {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs`);
+        setBlogs(res.data);
+      };
 
      const itemsPerPage = 6;
       const [currentPage, setCurrentPage] = useState(0);
     
       const startIndex = currentPage * itemsPerPage;
-      const paginatedBlogs = BlogUpdates.slice(startIndex, startIndex + itemsPerPage);
+      const paginatedBlogs = blogs.slice(startIndex, startIndex + itemsPerPage);
     
       const nextPage = () => {
-        if (startIndex + itemsPerPage < BlogUpdates.length) {
+        if (startIndex + itemsPerPage < blogs.length) {
           setCurrentPage(prev => prev + 1);
         }
       };
@@ -54,26 +64,26 @@ function Reviews() {
             </div>
             <div className='homeImg' style={{backgroundImage: 'url(/src/assets/african-kid-enjoying-life.jpg)'}}></div>
         </div>
-            {BlogUpdates.slice(0, 1).map(({id,description,name,imageUrl}) => {
+            {blogs.slice(0, 1).map(({id,description,name,mediaUrl}) => {
                             return(
                                 <FeaturedReviewsItem
                                     key={id}
                                     name={name}
                                     description={description}
-                                    image={imageUrl}
+                                    image={`${import.meta.env.VITE_API_URL}${mediaUrl}`}
                                 />
                             )
                         
                         })}
         <div className='reviewCont2'>
                 <div className='blogCards'>
-                    {paginatedBlogs.slice(1).map(({id,description,name,imageUrl}) => {
+                    {paginatedBlogs.slice(1).map(({id,description,name,mediaUrl}) => {
                         return(
                             <BlogItems
                                 key={id}
                                 name={name}
                                 description={description}
-                                image={imageUrl}
+                                image={`${import.meta.env.VITE_API_URL}${mediaUrl}`}
                             />
                         )
                     
@@ -83,7 +93,7 @@ function Reviews() {
                                     <button onClick={prevPage} disabled={currentPage === 0} style={{borderTopLeftRadius: '10px',
                                                                                                     borderBottomLeftRadius: '10px'
                                                                                                     }}>Previous</button>
-                                    <button onClick={nextPage} disabled={startIndex + itemsPerPage >= BlogUpdates.length}style={{borderTopRightRadius: '10px',
+                                    <button onClick={nextPage} disabled={startIndex + itemsPerPage >= blogs.length}style={{borderTopRightRadius: '10px',
                                                                                                     borderBottomRightRadius: '10px'
                                                                                                     }}>Next</button>
                                 </div>

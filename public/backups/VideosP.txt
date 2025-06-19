@@ -1,20 +1,30 @@
-import React, { useState } from 'react';
-import { Videos } from '../Data/Videos';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import '../Styles/Videos.css'
 import VideoItems2 from '../components/VideoItems2'
 import VideoItems3 from '../components/VideoItems3'
 
 function VideosP() {
 
+    const [videos, setVideos] = useState([]);
 
-const itemsPerPage = 6;
+    useEffect(() => {
+        fetchVideos();
+      }, []);
+    
+      const fetchVideos = async () => {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/videos`);
+        setVideos(res.data);
+      };
+
+    const itemsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(0);
 
   const startIndex = currentPage * itemsPerPage;
-  const paginatedVideos = Videos.slice(startIndex, startIndex + itemsPerPage);
+  const paginatedVideos = videos.slice(startIndex, startIndex + itemsPerPage);
 
   const nextPage = () => {
-    if (startIndex + itemsPerPage < Videos.length) {
+    if (startIndex + itemsPerPage < videos.length) {
       setCurrentPage(prev => prev + 1);
     }
   };
@@ -71,13 +81,13 @@ const itemsPerPage = 6;
                     </p>
                 </div>
                 <div className='latestVideos'>
-                {Videos.slice(0, 2).map(({id,description,name,video}) => {
+                {videos.slice(0, 2).map(({id,description,name,mediaUrl}) => {
                         return(
                             <VideoItems2
                                 key={id}
                                 name={name}
                                 description={description}
-                                video={video}
+                                video={`${import.meta.env.VITE_API_URL}${mediaUrl}`}
                             />
                         )                                        
                     })}
@@ -94,13 +104,13 @@ const itemsPerPage = 6;
                     </p>
                 </div>
                 <div className='allVideos'>
-                    {paginatedVideos.map(({id,description,name,video}) => {
+                    {paginatedVideos.map(({id,description,name,mediaUrl}) => {
                         return(
                             <VideoItems3
                                 key={id}
                                 name={name}
                                 description={description}
-                                video={video}
+                                video={`${import.meta.env.VITE_API_URL}${mediaUrl}`}
                             />
                         )                                        
                     })}
@@ -109,7 +119,7 @@ const itemsPerPage = 6;
                     <button onClick={prevPage} disabled={currentPage === 0} style={{borderTopLeftRadius: '10px',
                                                                                     borderBottomLeftRadius: '10px'
                                                                                     }}>Previous</button>
-                    <button onClick={nextPage} disabled={startIndex + itemsPerPage >= Videos.length}style={{borderTopRightRadius: '10px',
+                    <button onClick={nextPage} disabled={startIndex + itemsPerPage >= videos.length}style={{borderTopRightRadius: '10px',
                                                                                     borderBottomRightRadius: '10px'
                                                                                     }}>Next</button>
                 </div>

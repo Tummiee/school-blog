@@ -1,15 +1,36 @@
+import React, { useEffect, useState } from 'react';
 import BlogItems from '../components/BlogItems'
 import VideoItems from '../components/VideoItems'
-import { BlogUpdates } from '../Data/BlogUpdates';
-import { Videos } from '../Data/Videos';
 import '../Styles/Home.css'
 import {Link} from 'react-router-dom';
-
+import axios from 'axios';
 
 
 
 function Home() {
 
+    
+  const [blogs, setBlogs] = useState([]);
+
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
+  
+  const fetchBlogs = async () => {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs`);
+    setBlogs(res.data);
+  };
+
+  useEffect(() => {
+    fetchVideos();
+  }, []);
+
+  const fetchVideos = async () => {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/videos`);
+    setVideos(res.data);
+  };
 
   return (
     <div className='homeContainer'>
@@ -51,13 +72,13 @@ function Home() {
                    <Link to="/reviews" style={{textDecoration: 'none'}}><div className='viewAll'>VIEW ALL</div></Link>
                 </div>
                 <div className='blogCards'>
-                {BlogUpdates.length > 0 ? (
-                    BlogUpdates.slice(0, 3).map(({ id, description, title, imageUrl }) => (
+                {blogs.length > 0 ? (
+                    blogs.slice(0, 3).map(({ id, description, title, mediaUrl }) => (
                     <BlogItems
                         key={id}
                         name={title}
                         description={description}
-                        image={imageUrl}
+                        image={`${import.meta.env.VITE_API_URL}${mediaUrl}`}
                     />
                     ))
                 ) : (
@@ -96,13 +117,13 @@ function Home() {
             </div>
             <div className='homeCont3Right'>
                 <div className='videoCards'>
-                    {Videos.length > 0 ? (
-                        Videos.slice(0, 4).map(({id,description,name,video}) => (
+                    {videos.length > 0 ? (
+                        videos.slice(0, 4).map(({id,description,name,mediaUrl}) => (
                                 <VideoItems
                                     key={id}
                                     name={name}
                                     description={description}
-                                    video={video}
+                                    video={`${import.meta.env.VITE_API_URL}${mediaUrl}`}
                                 />
                             ))
                         ) : (
