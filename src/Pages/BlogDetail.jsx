@@ -1,0 +1,29 @@
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { BlogUpdates } from '../Data/BlogUpdates';
+
+
+function BlogDetail() {
+  const { id } = useParams();
+  const blog = BlogUpdates.find((post) => String(post.id) === id);
+
+  if (!blog) {
+    return <div style={{ padding: '2rem' }}>Blog post not found.</div>;
+  }
+
+  return (
+    <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
+      <h1>{blog.title}</h1>
+      {blog.image && (
+        <img
+          src={blog.image}
+          alt={blog.title}
+          style={{ width: '100%', maxHeight: '400px', objectFit: 'cover', borderRadius: '8px' }}
+        />
+      )}
+      <p style={{ color: 'gray', marginBottom: '1rem' }}>{blog.description}</p>
+    </div>
+  );
+}
+
+export default BlogDetail;

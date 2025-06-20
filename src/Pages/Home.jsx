@@ -52,13 +52,14 @@ function Home() {
                 </div>
                 <div className='blogCards'>
                 {BlogUpdates.length > 0 ? (
-                    BlogUpdates.slice(0, 3).map(({ id, description, title, imageUrl }) => (
-                    <BlogItems
-                        key={id}
-                        name={title}
-                        description={description}
-                        image={imageUrl}
-                    />
+                    BlogUpdates.slice(0, 3).map((blog) => (
+                    <Link className='blogLink' style={{textDecoration: 'none', color: 'inherit', display: 'inline-block'}} to={`/blog/${blog.id}`} key={blog.id}>
+                        <BlogItems
+                        image={blog.imageUrl}
+                        name={blog.name}
+                        description={blog.description}
+                        />
+                    </Link>
                     ))
                 ) : (
                     <div className="no-blogs">📝 No blog post yet.</div>

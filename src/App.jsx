@@ -4,12 +4,15 @@ import NavbarHome from './components/NavbarHome';
 import NavbarAbout from './components/NavbarAbout';
 import NavbarReviews from './components/NavbarReviews';
 import NavbarVideos from './components/NavbarVideos';
+import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Reviews from './Pages/Reviews';
 import Videos from './Pages/VideosP';
+
+import BlogPost from './Pages/BlogPost';
 
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
@@ -32,6 +35,7 @@ function AppLayout() {
         <Route path="/about" element={<About />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/videos" element={<Videos />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
       <Footer />
     </>
@@ -41,6 +45,7 @@ function AppLayout() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppLayout />
     </BrowserRouter>
   );

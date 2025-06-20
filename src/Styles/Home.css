@@ -111,7 +111,7 @@
     padding-top: 5%;
     gap: 3%;
   }
-  .blogCard:hover{
+  .blogLink:hover{
     border-radius: 15px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
     transition: 0.1s ease-out;
@@ -119,11 +119,12 @@
     cursor: pointer;
   }
 
-  .blogCard{
+  .blogLink{
     width: 31.33%;
+  }
+  .blogCard{
     position: relative;
-    
-    display: flex;
+     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
@@ -511,7 +512,7 @@
       flex-direction: column;
       align-items: center;
     }
-    .blogCard{
+    .blogLink{
       width: 100%;
       
       padding-top: 8%;
