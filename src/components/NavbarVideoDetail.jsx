@@ -26,8 +26,8 @@ const closeNavbar = () => setOpenLinks(false);
                 <div className='Links'>
                     <Link to="/"> HOME </Link>
                     <Link to="/about"> ABOUT </Link>
-                    <Link to="/reviews" style={{color: 'hsl(27, 77%, 65%)'}}> REVIEWS </Link>
-                    <Link to="/videos"> VIDEOS </Link> 
+                    <Link to="/reviews"> REVIEWS </Link>
+                    <Link to="/videos" style={{color: 'hsl(27, 77%, 65%)'}}> VIDEOS </Link> 
                 </div>
             </div>
 

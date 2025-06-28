@@ -96,8 +96,6 @@
     .video-container:hover{
     border-radius: 15px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-    transition: 0.1s ease-out;
-    transform: translateY(-10px);
     cursor: pointer;
   }
   .video-container:hover .h2h, .video-container:hover .p2h{
@@ -107,8 +105,6 @@
   .video-container2:hover{
     border-radius: 15px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-    transition: 0.1s ease-out;
-    transform: translateY(-10px);
     cursor: pointer;
   }
   .video-container2:hover .h2h, .video-container2:hover .p2h{

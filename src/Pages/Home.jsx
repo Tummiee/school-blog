@@ -98,13 +98,14 @@ function Home() {
             <div className='homeCont3Right'>
                 <div className='videoCards'>
                     {Videos.length > 0 ? (
-                        Videos.slice(0, 4).map(({id,description,name,video}) => (
+                        Videos.slice(0, 4).map((video) => (
+                            <Link style={{textDecoration: 'none', color: 'inherit', display: 'inline-block'}} to={`/video/${video.id}`} key={video.id}>
                                 <VideoItems
-                                    key={id}
-                                    name={name}
-                                    description={description}
-                                    video={video}
+                                video={video.video}
+                                name={video.name}
+                                description={video.description}
                                 />
+                            </Link>
                             ))
                         ) : (
                             <div className="no-blogs">📝 No video yet.</div>
