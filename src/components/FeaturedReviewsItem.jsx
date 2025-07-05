@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-function FeaturedReviewsItem({ image, name, description }) {
+function FeaturedReviewsItem({ id, image, name, description }) {
 
     const extractedSentence = description?.split('. ')[1] ? description.split('. ')[1] + '.' : description;
 
@@ -16,8 +17,12 @@ function FeaturedReviewsItem({ image, name, description }) {
               fontSize: 'clamp(1rem, 1.2vw, 2rem)',
               color: 'hsl(0, 0.00%, 54.10%)'
             }}>{extractedSentence}</p> 
-            <div className='homeButton'
-            style={{marginTop: '2%'}}>READ MORE</div>
+            <Link
+              to={`/blog/${id}`}
+              style={{ marginTop: '2%', textDecoration: 'none', display: 'inline-block' }}>
+              <div className='homeButton'
+              style={{marginTop: '2%'}}>READ MORE</div>
+            </Link>
         </div>
     </div>
   )

@@ -3,6 +3,7 @@ import FeaturedReviewsItem from '../components/FeaturedReviewsItem'
 import BlogItems from '../components/BlogItems'
 import { BlogUpdates } from '../Data/BlogUpdates';
 import '../Styles/Reviews.css'
+import {Link} from 'react-router-dom';
 
 function Reviews() {
 
@@ -54,30 +55,28 @@ function Reviews() {
             </div>
             <div className='homeImg' style={{backgroundImage: 'url(/src/assets/african-kid-enjoying-life.jpg)'}}></div>
         </div>
-            {BlogUpdates.slice(0, 1).map(({id,description,name,imageUrl}) => {
+            {BlogUpdates.slice(0, 1).map((blog) => {
                             return(
                                 <FeaturedReviewsItem
-                                    key={id}
-                                    name={name}
-                                    description={description}
-                                    image={imageUrl}
+                                   image={blog.imageUrl}
+                                   id={blog.id}
+                                    name={blog.name}
+                                    description={blog.description}
                                 />
                             )
                         
                         })}
         <div className='reviewCont2'>
                 <div className='blogCards'>
-                    {paginatedBlogs.slice(1).map(({id,description,name,imageUrl}) => {
-                        return(
-                            <BlogItems
-                                key={id}
-                                name={name}
-                                description={description}
-                                image={imageUrl}
-                            />
-                        )
-                    
-                    })}
+                    {paginatedBlogs.slice(1).map((blog) => (
+                    <Link className='blogLink' style={{textDecoration: 'none', color: 'inherit', display: 'inline-block'}} to={`/blog/${blog.id}`} key={blog.id}>
+                        <BlogItems
+                        image={blog.imageUrl}
+                        name={blog.name}
+                        description={blog.description}
+                        />
+                    </Link>
+                    ))}
                 </div>
                 <div className="pagination-buttons" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '40px' }}>
                                     <button onClick={prevPage} disabled={currentPage === 0} style={{borderTopLeftRadius: '10px',

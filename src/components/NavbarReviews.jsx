@@ -46,7 +46,7 @@ const closeNavbar = () => setOpenLinks(false);
                     </div>
                 </div>
                 <div className='rightSide'>
-                    <div className='rightSideBox'></div>
+                    <div className='rightSideBox' style={{backgroundColor: '#424242'}}></div>
                     <div className="socialMedia">
                         <Instagram />
                         <YouTube />

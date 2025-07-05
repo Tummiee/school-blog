@@ -1,5 +1,6 @@
 import React from 'react';
 import EastIcon from '@mui/icons-material/East';
+import { Link } from 'react-router-dom';
 
 
 function BlogItems({ image, name, description }) {
@@ -14,10 +15,13 @@ function BlogItems({ image, name, description }) {
         fontSize: 'clamp(1rem, 1.2vw, 2rem)',
         color: 'hsl(0, 0.00%, 54.10%)'
       }}>{extractedSentence}</pr>
-      <div className='readMore' style={{
-        fontSize: 'clamp(.9rem, 1.1vw, 2rem)',
-        color: 'hsl(27, 77%, 65%)'
-      }}>READ MORE <EastIcon style={{fontSize: 'clamp(.8rem, 1.2vw, 2rem)'}}/></div>
+      <Link  className='blogLink' style={{textDecoration: 'none', color: 'inherit', display: 'inline-block'}} >
+        <div className='readMore' style={{
+          fontSize: 'clamp(.9rem, 1.1vw, 2rem)',
+          color: 'hsl(27, 77%, 65%)'
+        }}>READ MORE <EastIcon style={{fontSize: 'clamp(.8rem, 1.2vw, 2rem)'}}/>
+        </div>
+      </Link>
     </div>
   );
 }

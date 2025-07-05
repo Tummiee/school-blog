@@ -1,0 +1,83 @@
+.video-post{
+    padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.vp-video{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.bp-share-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -1%;
+}
+
+.copyLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    border: 1.5px solid hsl(0, 0%, 59%);
+    height: 35px;
+    width: 140px;
+    font-size: clamp(.9rem, 1vw, 2rem);
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    border-radius: 10px;
+}
+.copyLink svg{
+    font-size: clamp(.9rem, 1.2vw, 2rem);
+}
+
+.bpLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+
+.bpIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    border: 1.5px solid hsl(0, 0%, 59%);
+    height: 35px;
+    width: 40px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    border-radius: 10px;
+}
+
+.bpIcons svg{
+    font-size: clamp(.9rem, 1.2vw, 2rem);
+}
+
+  .center-play2 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: hsl(27, 77%, 65%);
+    padding: 12px 20px;
+    border-radius: 50%;
+    pointer-events: none; /* icon is not clickable */
+  }
+  .center-play2 svg{
+    font-size: 5rem;
+  }
