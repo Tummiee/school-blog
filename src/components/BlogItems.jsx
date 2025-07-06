@@ -15,7 +15,7 @@ function BlogItems({ image, name, description }) {
         fontSize: 'clamp(1rem, 1.2vw, 2rem)',
         color: 'hsl(0, 0.00%, 54.10%)'
       }}>{extractedSentence}</pr>
-      <Link  className='blogLink' style={{textDecoration: 'none', color: 'inherit', display: 'inline-block'}} >
+      <Link   className='blogLink' style={{textDecoration: 'none', color: 'inherit', display: 'inline-block'}} >
         <div className='readMore' style={{
           fontSize: 'clamp(.9rem, 1.1vw, 2rem)',
           color: 'hsl(27, 77%, 65%)'

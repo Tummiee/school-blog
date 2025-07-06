@@ -53,7 +53,7 @@ const itemsPerPage = 6;
                 molestiae cumque praesentium? Culpa, ipsam similique.
             </p>
         </div>
-        <div className='homeImg' style={{backgroundImage: 'url(/src/assets/african-kid-enjoying-life.jpg)'}}></div>
+        <div className='homeImg' style={{backgroundImage: 'url(/src/assets/africanKid.jpg)'}}></div>
         </div>
 
         <div className='homeCont2 video'>
