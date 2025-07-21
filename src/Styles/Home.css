@@ -411,12 +411,16 @@
   
     .blogCard{
     position: relative;
+    gap: .5rem;
     
     }
     .bCImage{
       height: 200px;
     }
 
+    .readMore{
+      margin-top: -8%;
+    }
     .mailingSubscriptionBox{
       margin-top: 10%;
       height: 250px;
